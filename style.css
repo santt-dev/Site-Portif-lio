@@ -1,0 +1,120 @@
+/* Estilo básico para a página */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Fonte moderna */
+    margin: 0; /* Remove as margens padrão */
+    padding: 0; /* Remove o preenchimento padrão */
+    background-color: #121212; /* Fundo escuro */
+    color: #f0f0f0; /* Texto claro */
+}
+
+/* Estilo para o cabeçalho */
+header {
+    background-color: #1f1f1f; /* Fundo do cabeçalho em cinza escuro */
+    color: #00d1b2; /* Texto em verde menta */
+    padding: 20px 0; /* Preenchimento superior e inferior */
+    text-align: center; /* Centraliza o texto */
+    border-bottom: 2px solid #00d1b2; /* Borda inferior */
+}
+
+header .center {
+    display: flex; /* Flexbox para layout */
+    flex-direction: column; /* Itens em coluna */
+    align-items: center; /* Alinhamento central */
+}
+
+header .center img {
+    width: 120px; /* Largura da imagem */
+    border-radius: 50%; /* Bordas arredondadas */
+    border: 3px solid #00d1b2; /* Borda em verde menta */
+}
+
+header .subtitulo {
+    margin-top: 15px; /* Margem superior */
+}
+
+header h1, header h2 {
+    margin: 5px 0; /* Margens verticais de 5px */
+}
+
+/* Estilo para a navegação */
+nav ul {
+    list-style: none; /* Remove marcadores de lista */
+    padding: 0; /* Remove o preenchimento da lista */
+}
+
+nav ul li {
+    display: inline; /* Itens da lista em linha */
+    margin-right: 15px; /* Margem à direita dos itens da lista */
+}
+
+nav ul li a {
+    color: #00d1b2; /* Texto dos links em verde menta */
+    text-decoration: none; /* Remove sublinhado dos links */
+    padding: 5px 10px; /* Preenchimento interno dos links */
+    border-radius: 5px; /* Bordas arredondadas dos links */
+    transition: background-color 0.3s, color 0.3s; /* Transição suave */
+}
+
+nav ul li a:hover {
+    background-color: #00d1b2; /* Fundo dos links ao passar o mouse */
+    color: #121212; /* Texto dos links ao passar o mouse */
+    text-decoration: underline; /* Sublinhado dos links ao passar o mouse */
+}
+
+/* Estilo para as seções do corpo principal */
+main {
+    padding: 20px; /* Preenchimento ao main */
+}
+
+main section {
+    background-color: #1f1f1f; /* Fundo das seções em cinza escuro */
+    padding: 20px; /* Preenchimento às seções */
+    margin-bottom: 20px; /* Margem inferior às seções */
+    border-radius: 10px; /* Bordas arredondadas às seções */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra às seções */
+}
+
+main h3 {
+    color: #00d1b2; /* Cor do texto em verde menta */
+    margin-top: 0; /* Remove a margem superior dos cabeçalhos h3 */
+}
+
+/* Estilo para o rodapé */
+footer {
+    background-color: #1f1f1f; /* Fundo do rodapé em cinza escuro */
+    color: #f0f0f0; /* Texto do rodapé claro */
+    text-align: center; /* Centraliza o texto do rodapé */
+    padding: 20px 0; /* Preenchimento superior e inferior ao rodapé */
+    border-top: 2px solid #00d1b2; /* Borda superior */
+}
+
+footer div {
+    display: flex; /* Flexbox para layout */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Alinha os itens verticalmente */
+}
+
+footer a {
+    color: #f0f0f0; /* Texto dos links em cinza claro */
+    text-decoration: none; /* Remove sublinhado dos links */
+    margin: 0 15px; /* Margem horizontal aos links */
+    display: flex; /* Flexbox para layout dos links */
+    flex-direction: column; /* Itens em coluna */
+    align-items: center; /* Alinhamento central */
+    font-size: 15px; /* Tamanho da fonte */
+    transition: color 0.3s; /* Transição suave */
+}
+
+footer a:hover {
+    color: #00d1b2; /* Texto dos links ao passar o mouse */
+}
+
+footer img {
+    width: 30px; /* Largura das imagens */
+    height: 30px; /* Altura das imagens */
+    margin-bottom: 5px; /* Margem inferior às imagens */
+}
+
+footer p {
+    margin: 0; /* Remove margens dos parágrafos */
+}
