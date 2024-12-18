@@ -1,120 +1,159 @@
-/* Estilo básico para a página */
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilização geral do body */
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif; /* Fonte moderna */
-    margin: 0; /* Remove as margens padrão */
-    padding: 0; /* Remove o preenchimento padrão */
-    background-color: #121212; /* Fundo escuro */
-    color: #f0f0f0; /* Texto claro */
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
 }
 
-/* Estilo para o cabeçalho */
+/* Cabeçalho */
 header {
-    background-color: #1f1f1f; /* Fundo do cabeçalho em cinza escuro */
-    color: #00d1b2; /* Texto em verde menta */
-    padding: 20px 0; /* Preenchimento superior e inferior */
-    text-align: center; /* Centraliza o texto */
-    border-bottom: 2px solid #00d1b2; /* Borda inferior */
+    background-color: #24292e;
+    padding: 1rem 0;
+    color: #fff;
+    text-align: center;
 }
 
-header .center {
-    display: flex; /* Flexbox para layout */
-    flex-direction: column; /* Itens em coluna */
-    align-items: center; /* Alinhamento central */
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
 }
 
-header .center img {
-    width: 120px; /* Largura da imagem */
-    border-radius: 50%; /* Bordas arredondadas */
-    border: 3px solid #00d1b2; /* Borda em verde menta */
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
-header .subtitulo {
-    margin-top: 15px; /* Margem superior */
+header nav ul li a:hover {
+    color: #58a6ff;
 }
 
-header h1, header h2 {
-    margin: 5px 0; /* Margens verticais de 5px */
+/* Centro do cabeçalho */
+.center {
+    margin: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-/* Estilo para a navegação */
-nav ul {
-    list-style: none; /* Remove marcadores de lista */
-    padding: 0; /* Remove o preenchimento da lista */
+.center img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #58a6ff;
 }
 
-nav ul li {
-    display: inline; /* Itens da lista em linha */
-    margin-right: 15px; /* Margem à direita dos itens da lista */
+.subtitulo h1 {
+    font-size: 2rem;
+    margin-top: 0.5rem;
 }
 
-nav ul li a {
-    color: #00d1b2; /* Texto dos links em verde menta */
-    text-decoration: none; /* Remove sublinhado dos links */
-    padding: 5px 10px; /* Preenchimento interno dos links */
-    border-radius: 5px; /* Bordas arredondadas dos links */
-    transition: background-color 0.3s, color 0.3s; /* Transição suave */
+.subtitulo h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #bbb;
 }
 
-nav ul li a:hover {
-    background-color: #00d1b2; /* Fundo dos links ao passar o mouse */
-    color: #121212; /* Texto dos links ao passar o mouse */
-    text-decoration: underline; /* Sublinhado dos links ao passar o mouse */
-}
-
-/* Estilo para as seções do corpo principal */
+/* Conteúdo principal */
 main {
-    padding: 20px; /* Preenchimento ao main */
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
 }
 
-main section {
-    background-color: #1f1f1f; /* Fundo das seções em cinza escuro */
-    padding: 20px; /* Preenchimento às seções */
-    margin-bottom: 20px; /* Margem inferior às seções */
-    border-radius: 10px; /* Bordas arredondadas às seções */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra às seções */
+section {
+    background-color: #fff;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-main h3 {
-    color: #00d1b2; /* Cor do texto em verde menta */
-    margin-top: 0; /* Remove a margem superior dos cabeçalhos h3 */
+section h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #58a6ff;
+    padding-bottom: 0.5rem;
+    color: #24292e;
 }
 
-/* Estilo para o rodapé */
+section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+section ul li {
+    padding: 0.5rem 0;
+    font-weight: bold;
+}
+
+/* Rodapé */
 footer {
-    background-color: #1f1f1f; /* Fundo do rodapé em cinza escuro */
-    color: #f0f0f0; /* Texto do rodapé claro */
-    text-align: center; /* Centraliza o texto do rodapé */
-    padding: 20px 0; /* Preenchimento superior e inferior ao rodapé */
-    border-top: 2px solid #00d1b2; /* Borda superior */
+    background-color: #24292e;
+    color: #fff;
+    padding: 1.5rem 0;
+    text-align: center;
 }
 
 footer div {
-    display: flex; /* Flexbox para layout */
-    justify-content: center; /* Centraliza os itens horizontalmente */
-    align-items: center; /* Alinha os itens verticalmente */
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
 }
 
 footer a {
-    color: #f0f0f0; /* Texto dos links em cinza claro */
-    text-decoration: none; /* Remove sublinhado dos links */
-    margin: 0 15px; /* Margem horizontal aos links */
-    display: flex; /* Flexbox para layout dos links */
-    flex-direction: column; /* Itens em coluna */
-    align-items: center; /* Alinhamento central */
-    font-size: 15px; /* Tamanho da fonte */
-    transition: color 0.3s; /* Transição suave */
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+footer a img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0.5rem;
 }
 
 footer a:hover {
-    color: #00d1b2; /* Texto dos links ao passar o mouse */
+    color: #58a6ff;
 }
 
-footer img {
-    width: 30px; /* Largura das imagens */
-    height: 30px; /* Altura das imagens */
-    margin-bottom: 5px; /* Margem inferior às imagens */
+/* Links com ícones no rodapé */
+footer a p {
+    margin: 0;
+    font-size: 0.9rem;
 }
 
-footer p {
-    margin: 0; /* Remove margens dos parágrafos */
+/* Estilização responsiva para dispositivos menores */
+@media (max-width: 600px) {
+    header nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .center img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .subtitulo h1 {
+        font-size: 1.5rem;
+    }
+
+    section {
+        padding: 1rem;
+    }
 }
