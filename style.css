@@ -1,106 +1,66 @@
-/* Definindo variáveis para facilitar a personalização */
-:root {
-    --primary-color: #1e2a3a;
-    --accent-color: #ffd700;
-    --bg-color: #f4f4f4;
-    --text-color: #333;
-    --link-hover-color: #ffd700;
-    --transition-duration: 0.3s;
-    --animation-duration: 1s;
-}
-
-/* Reset de margens e padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilos gerais do corpo */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
+    background-color: #f4f4f4;
+    color: #333;
     line-height: 1.6;
     padding: 20px;
-    transition: background-color var(--transition-duration), color var(--transition-duration);
-    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-/* Animação do Header */
 header {
-    background: var(--primary-color);
+    background: #1e2a3a;
     color: #fff;
-    padding: 30px 20px;
+    padding: 20px;
     text-align: center;
-    border-radius: 15px;
+    border-radius: 10px;
     margin-bottom: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    transform: translateY(-50px);
-    animation: fadeIn 1s forwards;
 }
 
 header img {
-    width: 160px;
+    width: 150px;
     border-radius: 50%;
     margin-bottom: 15px;
-    opacity: 0;
-    animation: fadeInImage 1s forwards 0.5s;
 }
 
-/* Animações de fade para a imagem do logo */
-@keyframes fadeInImage {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Títulos no header */
 header .subtitulo h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-    letter-spacing: 2px;
-    font-weight: 600;
-    animation: slideInFromLeft 1s ease-out forwards;
+    font-size: 36px;
+    margin-bottom: 5px;
 }
 
 header .subtitulo h2 {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 300;
-    color: #ddd;
 }
 
-/* Navegação */
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 30px;
-    margin-top: 20px;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
-    text-transform: uppercase;
-    transition: color var(--transition-duration), transform var(--transition-duration);
-    font-size: 18px;
+    transition: color 0.3s;
 }
 
-/* Efeito de hover nos links do menu */
 nav ul li a:hover {
-    color: var(--link-hover-color);
-    transform: translateY(-5px);  /* Pequeno efeito de elevação */
+    color: #ffd700;
 }
 
-/* Menu Hamburguer */
 .menu-toggle {
     display: none;
     cursor: pointer;
@@ -111,37 +71,103 @@ nav ul li a:hover {
 }
 
 .menu-toggle .bar {
-    width: 35px;
-    height: 5px;
+    width: 30px;
+    height: 4px;
     background-color: #fff;
-    transition: transform var(--transition-duration);
 }
 
-/* Animação de fade */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+main {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Animação de slide da esquerda para a direita */
-@keyframes slideInFromLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
+section {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsividade para telas menores */
+h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    font-size: 18px;
+    padding-left: 1.2em;
+    position: relative;
+}
+
+ul li::before {
+    content: "•";
+    color: #1e2a3a;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.5em;
+}
+
+footer {
+    background: #1e2a3a;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 15px;
+    display: inline-block;
+}
+
+footer a:hover {
+    color: #ffd700;
+}
+
+footer img {
+    width: 40px;
+    margin-bottom: 5px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+button {
+    position: fixed;
+    bottom: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #1e2a3a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ffd700;
+}
+
+#back-to-top {
+    right: 20px;
+}
+
+#toggle-theme {
+    left: 20px;
+}
+
 @media (max-width: 768px) {
     header {
         text-align: center;
@@ -154,19 +180,20 @@ nav ul li a:hover {
     nav ul {
         display: none;
         flex-direction: column;
-        gap: 15px;
+        gap: 10px;
         align-items: center;
         margin-top: 20px;
-        opacity: 0;
-        transition: opacity 0.3s ease;
     }
 
-    nav ul.active {
-        display: flex;
-        opacity: 1;
+    nav ul li {
+        display: block;
     }
 
     .menu-toggle {
+        display: flex;
+    }
+
+    nav ul.active {
         display: flex;
     }
 
@@ -174,62 +201,7 @@ nav ul li a:hover {
         padding: 0 15px;
     }
 
-    /* Estilo para seções */
     section {
-        padding: 20px;
-        margin-top: 20px;
-        border-radius: 10px;
-        background-color: #fff;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        opacity: 0;
-        transform: translateY(20px);
-        animation: slideIn 1s ease-out;
-    }
-
-    section h3 {
-        font-size: 28px;
-        margin-bottom: 15px;
-        color: var(--primary-color);
-        animation: slideInFromLeft 1s ease-out forwards;
-    }
-
-    section p {
-        font-size: 16px;
-        line-height: 1.8;
-        color: #555;
-    }
-
-    footer {
-        opacity: 0;
-        transform: translateY(30px);
-        animation: fadeIn 1s forwards 1.5s;
-        background: var(--primary-color);
-        color: #fff;
         padding: 15px;
-        text-align: center;
-        border-radius: 10px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    }
-
-    footer a {
-        color: #fff;
-        text-decoration: none;
-        transition: color var(--transition-duration);
-    }
-
-    footer a:hover {
-        color: var(--link-hover-color);
-    }
-}
-
-/* Animação de slide */
-@keyframes slideIn {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
     }
 }
