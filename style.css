@@ -41,6 +41,8 @@ header h2 {
     font-size: 1.5rem;
     color: #fff;
     margin-top: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    animation: slideInFromTop 2s ease-out;
 }
 
 nav {
@@ -51,6 +53,7 @@ nav {
 
 #menu {
     list-style: none;
+    
     display: flex;
     justify-content: flex-end;
 }
@@ -84,16 +87,19 @@ nav {
     0% { transform: translateY(-20px); }
     100% { transform: translateY(0); }
 }
-
 main {
     padding: 40px 20px;
     max-width: 1200px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    animation: slideInFromTop 2s ease-out;
     margin: 0 auto;
 }
 
 section {
     margin-bottom: 30px;
     padding: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    animation: slideInFromTop 2s ease-out;
     background: #222;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -102,11 +108,15 @@ section {
 h3 {
     font-size: 2rem;
     color: #ff3366;
+    justify-items: center;
+    justify-content: center;
     margin-bottom: 10px;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 ul {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    animation: slideInFromTop 2s ease-out;
     list-style-type: none;
 }
 
