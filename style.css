@@ -14,7 +14,7 @@ body {
 }
 
 header {
-    background: linear-gradient(135deg, #ff3366, #ffcc00);
+    background: linear-gradient(135deg, DarkSlateGrey, Teal);
     padding: 20px 0;
     text-align: center;
     position: relative;
@@ -107,7 +107,8 @@ section {
 
 h3 {
     font-size: 2rem;
-    color: #ff3366;
+    color: 	whitesmoke;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);    
     justify-items: center;
     justify-content: center;
     margin-bottom: 10px;
